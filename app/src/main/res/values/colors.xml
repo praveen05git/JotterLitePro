@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5dd140</color>
+    <color name="colorPrimaryDark">#EB399E1F</color>
+    <color name="colorAccent">#5dd140</color>
+    <color name="dark">#2B0A17</color>
+    <color name="bgDark">#000000</color>
+    <color name="ActionBarDark">#460B22</color>
+    <color name="white">#FFFFFF</color>
+    <color name="textWhite">#FFFFFF</color>
+    <attr name="buttonColor" format="color"></attr>
+</resources>

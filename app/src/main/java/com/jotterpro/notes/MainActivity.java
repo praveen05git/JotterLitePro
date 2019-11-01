@@ -253,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.more_opt:
-                Intent moewapps = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Hence+Simplified"));
+                Intent moewapps = new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/dev?id=7031227816779180923"));
                 startActivity(moewapps);
                 return true;
 

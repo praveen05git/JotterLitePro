@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
         android:layout_marginLeft="136dp"
-        android:text="Version 7.8.1"
+        android:text="Version 8.0.1"
         android:textColor="@color/bgDark"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/contact"

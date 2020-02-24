@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JOTTER Lite</string>
+    <string name="app_name">JOTTER Lite Pro</string>
     <string name="title_activity_main2">editActivity</string>
     <string name="title_activity_view_all">viewAll</string>
 </resources>

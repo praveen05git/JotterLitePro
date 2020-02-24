@@ -22,6 +22,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -70,14 +71,16 @@ public class MainActivity extends AppCompatActivity {
 
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(final View v) {
                 if(name.getText().toString().equals(""))
                 {
-                    Toast.makeText(getApplicationContext(),"Enter file name",Toast.LENGTH_SHORT).show();
+                    Snackbar.make(v,"Enter file name", Snackbar.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(),"Enter file name",Toast.LENGTH_SHORT).show();
                 }
                 else if(cont.getText().toString().equals(""))
                 {
-                    Toast.makeText(getApplicationContext(),"Enter content",Toast.LENGTH_SHORT).show();
+                    Snackbar.make(v,"Enter content", Snackbar.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(),"Enter content",Toast.LENGTH_SHORT).show();
                 }
 
                 else
@@ -112,7 +115,14 @@ public class MainActivity extends AppCompatActivity {
                                 FileWriter fw=new FileWriter(nFile);
                                 fw.write(content);
                                 fw.close();
-                                Toast.makeText(getApplicationContext(),"File saved to "+f,Toast.LENGTH_SHORT).show();
+                                Snackbar.make(v,"File saved to "+f, Snackbar.LENGTH_LONG)
+                                        .setAction("View File", new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                HomeActivity(null);
+                                            }
+                                        }).show();
+                                //Toast.makeText(getApplicationContext(),"File saved to "+f,Toast.LENGTH_SHORT).show();
                             }catch(Exception e){Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();}
                         }
                         else
@@ -133,7 +143,14 @@ public class MainActivity extends AppCompatActivity {
                                         FileWriter fw=new FileWriter(nFile);
                                         fw.write(content);
                                         fw.close();
-                                        Toast.makeText(getApplicationContext(),"File saved to "+f,Toast.LENGTH_SHORT).show();
+                                        Snackbar.make(v,"File saved to"+f, Snackbar.LENGTH_LONG)
+                                                .setAction("View File", new View.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(View v) {
+                                                        HomeActivity(null);
+                                                    }
+                                                }).show();
+                                        //Toast.makeText(getApplicationContext(),"File saved to "+f,Toast.LENGTH_SHORT).show();
                                     }catch(Exception e){Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();}
                                 }
                             });
@@ -263,13 +280,15 @@ public class MainActivity extends AppCompatActivity {
                     Intent AboutIntent=new Intent(this,newabout.class);
                     AboutIntent.putExtra("nitVal","One");
                     startActivity(AboutIntent);
-                    overridePendingTransition(R.anim.enter_anim,R.anim.exit_anim);
+                    overridePendingTransition(R.anim.right_enter, R.anim.left_out);
+                    //overridePendingTransition(R.anim.enter_anim,R.anim.exit_anim);
                 }
                 else {
                     Intent HomeIntent = new Intent(this, newabout.class);
                     HomeIntent.putExtra("nitVal","Zero");
                     startActivity(HomeIntent);
-                    overridePendingTransition(R.anim.enter_anim, R.anim.exit_anim);
+                    overridePendingTransition(R.anim.right_enter, R.anim.left_out);
+                    //overridePendingTransition(R.anim.enter_anim, R.anim.exit_anim);
                 }
                 return true;
 
@@ -319,13 +338,13 @@ public class MainActivity extends AppCompatActivity {
             Intent HomeIntent=new Intent(this,HomeScreen.class);
             HomeIntent.putExtra("nitVal","One");
             startActivity(HomeIntent);
-            overridePendingTransition(R.anim.enter_anim,R.anim.exit_anim);
+            overridePendingTransition(R.anim.right_enter, R.anim.left_out);
         }
         else {
             Intent HomeIntent = new Intent(this, HomeScreen.class);
             HomeIntent.putExtra("nitVal","Zero");
             startActivity(HomeIntent);
-            overridePendingTransition(R.anim.enter_anim, R.anim.exit_anim);
+            overridePendingTransition(R.anim.right_enter, R.anim.left_out);
         }
     }
 

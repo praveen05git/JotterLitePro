@@ -41,7 +41,7 @@ public class newabout extends AppCompatActivity {
 
         Intent MainIntent=new Intent(this,MainActivity.class);
         startActivity(MainIntent);
-        overridePendingTransition(android.R.anim.slide_in_left,0);
+        overridePendingTransition(R.anim.left_enter,R.anim.right_out);
     }
 
 }

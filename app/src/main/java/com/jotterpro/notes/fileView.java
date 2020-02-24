@@ -15,6 +15,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -86,7 +87,8 @@ public class fileView extends AppCompatActivity {
                     fileBody.setFocusableInTouchMode(true);
                     stat=1;
                     fab_edit.setImageDrawable(getResources().getDrawable(R.drawable.ic_save_black_24dp));
-                    Toast.makeText(getApplicationContext(),"Now you can edit your Jot",Toast.LENGTH_SHORT).show();
+                    Snackbar.make(v,"Now you can edit your Jot", Snackbar.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(),"Now you can edit your Jot",Toast.LENGTH_SHORT).show();
                 }
 
                 else
@@ -110,7 +112,8 @@ public class fileView extends AppCompatActivity {
                     fileBody.clearFocus();
                     stat=0;
                     fab_edit.setImageDrawable(getResources().getDrawable(R.drawable.ic_edit_black_24dp));
-                    Toast.makeText(getApplicationContext(),"Jot Saved",Toast.LENGTH_SHORT).show();
+                    Snackbar.make(v,"Jot Saved", Snackbar.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(),"Jot Saved",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -200,6 +203,6 @@ public class fileView extends AppCompatActivity {
         else
             HomeIntent.putExtra("nitVal","Zero");
         startActivity(HomeIntent);
-        overridePendingTransition(android.R.anim.slide_in_left,0);
+        overridePendingTransition(R.anim.left_enter,R.anim.right_out);
     }
 }

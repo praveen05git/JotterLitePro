@@ -14,15 +14,13 @@ public class newabout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTitle("About");
 
-        Intent intent=getIntent();
-        String pass=intent.getStringExtra("nitVal");
+        Intent intent = getIntent();
+        String pass = intent.getStringExtra("nitVal");
 
-        if(pass.equals("One"))
-        {
+        if (pass.equals("One")) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             setTheme(R.style.DarkTheme);
-        }
-        else {
+        } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             setTheme(R.style.AppTheme);
         }
@@ -39,9 +37,9 @@ public class newabout extends AppCompatActivity {
 
     public void MainScreen(View view) {
 
-        Intent MainIntent=new Intent(this,MainActivity.class);
+        Intent MainIntent = new Intent(this, MainActivity.class);
         startActivity(MainIntent);
-        overridePendingTransition(R.anim.left_enter,R.anim.right_out);
+        overridePendingTransition(R.anim.left_enter, R.anim.right_out);
     }
 
 }

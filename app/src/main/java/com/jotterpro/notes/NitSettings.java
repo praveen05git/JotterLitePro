@@ -7,21 +7,18 @@ public class NitSettings {
 
     SharedPreferences NitPref;
 
-    public NitSettings(Context context)
-    {
-        NitPref=context.getSharedPreferences("NightPreference",Context.MODE_PRIVATE);
+    public NitSettings(Context context) {
+        NitPref = context.getSharedPreferences("NightPreference", Context.MODE_PRIVATE);
     }
 
-    public void setNitState(Boolean state)
-    {
-        SharedPreferences.Editor editor=NitPref.edit();
-        editor.putBoolean("NightMode",state);
+    public void setNitState(Boolean state) {
+        SharedPreferences.Editor editor = NitPref.edit();
+        editor.putBoolean("NightMode", state);
         editor.commit();
     }
 
-    public Boolean loadNitState()
-    {
-        Boolean state=NitPref.getBoolean("NightMode",false);
+    public Boolean loadNitState() {
+        Boolean state = NitPref.getBoolean("NightMode", false);
         return state;
     }
 }

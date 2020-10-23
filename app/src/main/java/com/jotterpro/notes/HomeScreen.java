@@ -33,17 +33,16 @@ public class HomeScreen extends AppCompatActivity {
 
         setTitle("My Jots");
 
-        Intent intent=getIntent();
-        String pass=intent.getStringExtra("nitVal");
+        Intent intent = getIntent();
+        String pass = intent.getStringExtra("nitVal");
 
-        if(pass.equals("One"))
- //           if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES)
+        if (pass.equals("One"))
+        //           if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES)
 //        if (nitSettings.loadNitState() == true)
-            {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                setTheme(R.style.DarkTheme);
-            }
-        else {
+        {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            setTheme(R.style.DarkTheme);
+        } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             setTheme(R.style.AppTheme);
         }
@@ -76,19 +75,19 @@ public class HomeScreen extends AppCompatActivity {
             lView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                 @Override
                 public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                    AlertDialog alt=new AlertDialog.Builder(HomeScreen.this).create();
+                    AlertDialog alt = new AlertDialog.Builder(HomeScreen.this).create();
                     alt.setTitle("Warning!");
-                    fileName=ar.get(position);
-                    alt.setMessage("Do you want to delete, "+fileName+"?");
+                    fileName = ar.get(position);
+                    alt.setMessage("Do you want to delete, " + fileName + "?");
 
                     alt.setButton(AlertDialog.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            File f=new File(Environment.getExternalStorageDirectory()+"/MyJots"+"/"+fileName);
+                            File f = new File(Environment.getExternalStorageDirectory() + "/MyJots" + "/" + fileName);
                             f.delete();
                             finish();
                             startActivity(getIntent());
-                            Toast.makeText(getApplicationContext(),"File Deleted",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "File Deleted", Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -121,15 +120,15 @@ public class HomeScreen extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-                MainScreen(null);
+        MainScreen(null);
 
     }
 
     public void MainScreen(View view) {
 
-        Intent MainIntent=new Intent(this,MainActivity.class);
+        Intent MainIntent = new Intent(this, MainActivity.class);
         startActivity(MainIntent);
-        overridePendingTransition(R.anim.left_enter,R.anim.right_out);
+        overridePendingTransition(R.anim.left_enter, R.anim.right_out);
     }
 
 

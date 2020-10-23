@@ -16,13 +16,13 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="8dp"
-        android:textColor="?attr/textColor"
-        android:textColorHint="?attr/tintColor"
-        android:foregroundTint="?attr/tintColor"
         android:backgroundTint="?attr/tintColor"
         android:ems="10"
+        android:foregroundTint="?attr/tintColor"
         android:hint="File Name"
         android:inputType="textPersonName"
+        android:textColor="?attr/textColor"
+        android:textColorHint="?attr/tintColor"
         app:layout_constraintBottom_toTopOf="@+id/edit_body"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,6 @@
         android:src="@drawable/ic_edit_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

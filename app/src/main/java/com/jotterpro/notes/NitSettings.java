@@ -5,20 +5,20 @@ import android.content.SharedPreferences;
 
 public class NitSettings {
 
-    SharedPreferences NitPref;
+    SharedPreferences nitPref;
 
     public NitSettings(Context context) {
-        NitPref = context.getSharedPreferences("NightPreference", Context.MODE_PRIVATE);
+        nitPref = context.getSharedPreferences("NightPreference", Context.MODE_PRIVATE);
     }
 
     public void setNitState(Boolean state) {
-        SharedPreferences.Editor editor = NitPref.edit();
+        SharedPreferences.Editor editor = nitPref.edit();
         editor.putBoolean("NightMode", state);
         editor.commit();
     }
 
     public Boolean loadNitState() {
-        Boolean state = NitPref.getBoolean("NightMode", false);
+        Boolean state = nitPref.getBoolean("NightMode", false);
         return state;
     }
 }

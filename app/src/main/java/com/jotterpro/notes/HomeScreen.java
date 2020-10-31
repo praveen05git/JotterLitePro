@@ -111,7 +111,7 @@ public class HomeScreen extends AppCompatActivity {
 
 
     public void viewFiles(View view) {
-        Intent FilesIntent = new Intent(this, fileView.class);
+        Intent FilesIntent = new Intent(this, FileView.class);
         FilesIntent.putExtra("message", fileName);
         startActivity(FilesIntent);
         overridePendingTransition(R.anim.right_enter, R.anim.left_out);

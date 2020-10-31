@@ -23,7 +23,7 @@ import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-public class fileView extends AppCompatActivity {
+public class FileView extends AppCompatActivity {
 
     EditText fileHead, fileBody;
     FloatingActionButton fab_edit;
@@ -119,7 +119,7 @@ public class fileView extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-        AlertDialog alt_dia = new AlertDialog.Builder(fileView.this).create();
+        AlertDialog alt_dia = new AlertDialog.Builder(FileView.this).create();
         alt_dia.setTitle("Save your edits!");
         alt_dia.setMessage("Are you sure, you want to go back?");
 
@@ -154,7 +154,7 @@ public class fileView extends AppCompatActivity {
 
         switch (del_menu_id) {
             case R.id.opt_del:
-                AlertDialog alt = new AlertDialog.Builder(fileView.this).create();
+                AlertDialog alt = new AlertDialog.Builder(FileView.this).create();
                 alt.setTitle("Warning!");
                 alt.setMessage("Do you want to delete, " + fileName + "?");
 

@@ -14,8 +14,8 @@
         android:roundIcon="@mipmap/ic_icon_circle"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".newabout"></activity>
-        <activity android:name=".fileView" />
+        <activity android:name=".NewAbout"></activity>
+        <activity android:name=".FileView" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

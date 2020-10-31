@@ -30,7 +30,7 @@ import java.io.FileWriter;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText name, cont;
+    EditText name, content;
     FloatingActionButton btn_save;
     private String save_name;
     private static final String state_name = "Empty";
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         name = findViewById(R.id.edit_head);
         save_name = name.getText().toString();
-        cont = findViewById(R.id.edit_body);
+        content = findViewById(R.id.edit_body);
         btn_save = findViewById(R.id.btn_save);
 
 
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 if (name.getText().toString().equals("")) {
                     Snackbar.make(v, "Enter file name", Snackbar.LENGTH_SHORT).show();
                     //Toast.makeText(getApplicationContext(),"Enter file name",Toast.LENGTH_SHORT).show();
-                } else if (cont.getText().toString().equals("")) {
+                } else if (content.getText().toString().equals("")) {
                     Snackbar.make(v, "Enter content", Snackbar.LENGTH_SHORT).show();
                     //Toast.makeText(getApplicationContext(),"Enter content",Toast.LENGTH_SHORT).show();
                 } else {
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
                     if (Environment.MEDIA_MOUNTED.equals(state) && checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                         final String filename = name.getText().toString() + ".txt";
-                        final String content = cont.getText().toString();
+                        final String content = MainActivity.this.content.getText().toString();
                         final String folder_main = "MyJots";
                         int check = 0;
 
@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         name.setText("");
-                        cont.setText("");
+                        content.setText("");
                         Toast.makeText(getApplicationContext(), "New File created", Toast.LENGTH_SHORT).show();
                     }
                 });

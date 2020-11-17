@@ -1,10 +1,10 @@
 <h1 align="center">Jotter Lite Pro</h1>
 
 <p align="center">  
-Ad-free version of <a href="https://github.com/praveen05git/JotterLite">Jotter Lite!</a></br>
 You can take notes in Jotter and share your notes as a text file to anyone</br>
 Browse through your jots, Read them and also you can Edit them</br>
 Wanna note down something at night? Use the Night mode!</br>
+Ad-free version of <a href="https://github.com/praveen05git/JotterLite">Jotter Lite!</a></br>
 </p>
 </br>
 

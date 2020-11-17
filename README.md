@@ -1,7 +1,7 @@
 <h1 align="center">Jotter Lite Pro</h1>
 
 <p align="center">  
-This is an Ad-free version of JOTTER!</br>
+This is an Ad-free version of Jotter Lite!</br>
 You can take notes in Jotter and share your notes as a text file to anyone</br>
 Browse through your jots, Read them and also you can Edit them</br>
 Wanna note down something at night? Use the Night mode!</br>

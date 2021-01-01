@@ -9,8 +9,8 @@ Ad-free version of <a href="https://github.com/praveen05git/JotterLite">Jotter L
 </br>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/praveen05git/JotterLitePro/master/screenshots/jotter1.png" width="21%" />
-  <img src="https://raw.githubusercontent.com/praveen05git/JotterLitePro/master/screenshots/jotter2.png" width="21%" />
+  <img src="https://raw.githubusercontent.com/praveen05git/JotterLitePro/master/screenshots/jotter1.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/praveen05git/JotterLitePro/master/screenshots/jotter2.png" width="30%" >
 </p>
 
 ## Features
@@ -32,8 +32,8 @@ Ad-free version of <a href="https://github.com/praveen05git/JotterLite">Jotter L
 - Custom Transition animations between activities</br>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/praveen05git/JotterLitePro/master/screenshots/jotter3.png" width="21%" />
-  <img src="https://raw.githubusercontent.com/praveen05git/JotterLitePro/master/screenshots/jotter4.png" width="21%" />
+  <img src="https://raw.githubusercontent.com/praveen05git/JotterLitePro/master/screenshots/jotter3.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/praveen05git/JotterLitePro/master/screenshots/jotter4.png" width="30%" />
 </p>
 
 ## App Trailer
